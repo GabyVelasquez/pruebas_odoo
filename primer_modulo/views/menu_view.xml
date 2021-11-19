@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<odoo>
+    <!--VISTA MENÚ-->
+    <record id="libros_action" model="ir.actions.act_window"><!--Acción de submenú-->
+        <field name="name">librosC</field> <!--Título de módulo creado-->
+        <field name="res_model">libros</field><!--Según modelo creado (_name=libros)-->
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record id="autores_action" model="ir.actions.act_window"><!--Acción de submenú-->
+        <field name="name">Autores</field> <!--Título de módulo creado-->
+        <field name="res_model">autor</field><!--Según modelo creado (_name=autor)-->
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="categorias_action" model="ir.actions.act_window"><!--Acción de submenú-->
+        <field name="name">Categorías</field> <!--Título de módulo creado-->
+        <field name="res_model">categoria_libro</field><!--Según modelo creado (_name=categoria_libro)-->
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Mi libreríaA" id="libreria_menu"/><!--Título del módulo en Menú-->
+    <menuitem name="LibrosB" id="libros_menu" parent="libreria_menu" action="libros_action"/><!--SubMenú (pestaña)-->
+    <menuitem name="Autores" id="autores_menu" parent="libreria_menu" action="autores_action"/><!--SubMenú (pestaña)-->
+    <menuitem name="Categorías" id="categorias_menu" parent="libreria_menu" action="categorias_action"/>
+</odoo>
