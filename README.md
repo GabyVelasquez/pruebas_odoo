@@ -1,2 +1,1 @@
-# pruebas_odoo
-Odoo 14
+Probando Odoo 14...
