@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+<!--        <report string="Informe visita"-->
+<!--                id="custom_crm_visit_report"-->
+<!--                model="custom_crm.visit"-->
+<!--                report_type="qweb-pdf"-->
+<!--                name="custom_crm.report_visit_card"-->
+<!--                file="custom_crm.report_visit_card"-->
+<!--                attachment_use="True"-->
+<!--        />-->
+        <record id="action_report_custom_crm_visit" model="ir.actions.report">
+            <field name="name">Informe visita</field>
+            <field name="model">custom_crm.visit</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">custom_crm.report_visit_card</field>
+            <field name="report_file">custom_crm.report_visit_card</field>
+            <field name="binding_model_id" ref="custom_crm.model_custom_crm_visit"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>
