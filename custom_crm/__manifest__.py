@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 {
     'name': "custom_crm",
 
@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','sale_management'],
 
     # always loaded
     'data': [

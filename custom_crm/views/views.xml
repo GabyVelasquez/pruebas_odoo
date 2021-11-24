@@ -118,6 +118,23 @@
           </p>
       </field>
     </record>
+      
+    <!-- Inherit Form View to Modify it -->
+    <record id="view_inherit_sale_order_form" model="ir.ui.view">
+        <field name="name">view.inherit.sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            
+            <!-- position: after|before|replace|attributes|inside -->
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                <!-- Add your fields or attributes here -->
+                <field name="zone"/>
+            </xpath>
+            
+        </field>
+    </record>  
+      
 <!--      Menu-->
     <menuitem id="menu_custom_crm_root" name="Custom CRM" sequence="10"/>
     <menuitem id="menu_custom_crm_visit_categ" name="Operaciones" parent="menu_custom_crm_root" sequence="0"/>

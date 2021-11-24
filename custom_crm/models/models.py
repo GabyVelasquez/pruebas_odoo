@@ -54,3 +54,8 @@ class VisitReport(models.AbstractModel):
                'doc_model': self.env['custom_crm.visit'],
                'docs': self.env['custom_crm.visit'].browse(docids)
           }
+
+class CustomSaleOrder(models.Model):
+     _inherit = 'sale.order'
+
+     zone = fields.Selection([('N', 'Norte'), ('C', 'Centro'), ('S', 'Sur')], string="Zona comercial")
